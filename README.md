@@ -21,7 +21,17 @@ pip install -r requirements.txt
 cp .env.example .env
 ```
 
-Renseigner `DJANGO_SECRET_KEY` dans `.env` avant tout usage hors poste de développement.
+Renseignez `DJANGO_SECRET_KEY` dans `.env`. Django ne charge pas automatiquement ce fichier : avant de lancer l'application, chargez ses variables dans votre terminal.
+
+Sous macOS/Linux :
+
+```bash
+set -a
+. ./.env
+set +a
+```
+
+Sous Windows PowerShell, définissez au minimum `DJANGO_SECRET_KEY` dans la session avec `$env:DJANGO_SECRET_KEY = "votre-clé-locale"`.
 
 ## Lancement
 
