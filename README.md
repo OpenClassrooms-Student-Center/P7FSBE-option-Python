@@ -1,4 +1,4 @@
-# Santélog — Suivi des transports
+# Santélog
 
 API interne de l'équipe Suivi Transports de Santélog. Elle trace chaque transport de produits de santé (médicaments, dispositifs médicaux, échantillons biologiques), les relevés de température effectués en route et les établissements destinataires.
 
