@@ -9,9 +9,13 @@ SECRET_KEY = os.environ.get(
     "DJANGO_SECRET_KEY", "django-insecure-santelog-suivi-transports-2019-dev"
 )
 
-DEBUG = True
+DEBUG = os.environ.get("DJANGO_DEBUG", "True").lower() in {"true", "1", "yes"}
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = [
+    host.strip()
+    for host in os.environ.get("DJANGO_ALLOWED_HOSTS", "*").split(",")
+    if host.strip()
+]
 
 
 # Applications

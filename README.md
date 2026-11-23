@@ -1,4 +1,4 @@
-# Santélog
+# Santélog - Suivi des transports
 
 API interne de l'équipe Suivi Transports de Santélog. Elle trace chaque transport de produits de santé (médicaments, dispositifs médicaux, échantillons biologiques), les relevés de température effectués en route et les établissements destinataires.
 
@@ -13,7 +13,7 @@ L'interface web de suivi (écran de suivi des transports, tableau de bord) est m
 ## Installation
 
 ```bash
-git clone <url-du-depot> santelog-suivi-transports
+git clone https://github.com/OpenClassrooms-Student-Center/P7FSBE-option-Python.git santelog-suivi-transports
 cd santelog-suivi-transports
 python -m venv .venv
 source .venv/bin/activate        # Windows : .venv\Scripts\activate
@@ -21,7 +21,17 @@ pip install -r requirements.txt
 cp .env.example .env
 ```
 
-Renseigner `DJANGO_SECRET_KEY` dans `.env` avant tout usage hors poste de développement.
+Renseignez `DJANGO_SECRET_KEY` dans `.env`. Django ne charge pas automatiquement ce fichier : avant de lancer l'application, chargez ses variables dans votre terminal.
+
+Sous macOS/Linux :
+
+```bash
+set -a
+. ./.env
+set +a
+```
+
+Sous Windows PowerShell, définissez au minimum `DJANGO_SECRET_KEY` dans la session avec `$env:DJANGO_SECRET_KEY = "votre-clé-locale"`.
 
 ## Lancement
 
