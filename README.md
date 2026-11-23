@@ -1,4 +1,4 @@
-# Santélog — Suivi des transports
+# Santélog - Suivi des transports
 
 API interne de l'équipe Suivi Transports de Santélog. Elle trace chaque transport de produits de santé (médicaments, dispositifs médicaux, échantillons biologiques), les relevés de température effectués en route et les établissements destinataires.
 
@@ -13,7 +13,7 @@ L'interface web de suivi (écran de suivi des transports, tableau de bord) est m
 ## Installation
 
 ```bash
-git clone <url-du-depot> santelog-suivi-transports
+git clone https://github.com/OpenClassrooms-Student-Center/P7FSBE-option-Python.git santelog-suivi-transports
 cd santelog-suivi-transports
 python -m venv .venv
 source .venv/bin/activate        # Windows : .venv\Scripts\activate
